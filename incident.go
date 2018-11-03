@@ -102,6 +102,7 @@ type CreateIncidentOptions struct {
 	IncidentKey      string       `json:"incident_key"`
 	Body             APIDetails   `json:"body"`
 	EscalationPolicy APIReference `json:"escalation_policy,omitempty"`
+	Urgency          string       `json:"urgency,omitempty"`
 	Assignments      []Assignment `json:assignments,omitempty`
 }
 
