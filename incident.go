@@ -101,7 +101,8 @@ type CreateIncidentOptions struct {
 	Priority         APIReference `json:"priority"`
 	IncidentKey      string       `json:"incident_key"`
 	Body             APIDetails   `json:"body"`
-	EscalationPolicy APIReference `json:"escalation_policy"`
+	EscalationPolicy APIReference `json:"escalation_policy,omitempty"`
+	Assignments      []Assignment `json:assignments,omitempty`
 }
 
 // CreateIncident creates an incident synchronously without a corresponding event from a monitoring service.
